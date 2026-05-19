@@ -1,36 +1,51 @@
-# LPT
+# PEOT
 
-![LPT](figures/main_idea.png)
+![PEOT](figures/teaser.png)
 
-Official implementation of the CVPR2022 paper "Learning of Global Objective for Network Flow in Multi-Object Tracking"
+Official implementation of the paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation"
 
-## Setup
+## Prepare your data
+The `data` folder should be aranged in the following way:
 
-```shell script
-
-# Install cvxpy and qpth
-pip install cvxpy
-pip install qpth
-
-# Install pytorch_geometric(Version < 2.0.0) and gurobipy, please check if gurobipy is correctly installed
-import gurobipy as gp
-gurobi_solver = gp.Model()
-
-# Install torchreid from: https://github.com/KaiyangZhou/deep-person-reid, and put it inside ./lib folder.
-
+```data
+data
+|--Breakfast
+|  `--features
+|     `--cereals
+|        `--P03_cam01_P03_cereals.txt
+|        `...
+|     `--coffee
+|     `--friedegg
+|     `...
+|  `--groundTruth
+|     `--P03_cam01_P03_cereals
+|     `...
+|  `--mapping
+|     `--mapping.txt
+|
+|--YTI
+|  `...
+|
+|--FS
+|  `...
+|--desktop_assembly
+|  `...
 ```
 
-## Data
-Download pre-processed detections&&appearance features (~1.4GB): [\[Google Drive\]](https://drive.google.com/file/d/1rD5gozRbZcMntZAmbCkgJ1qF8X8NNRFb/view?usp=sharing)
-We aslo provide the tracking results on MOT17/20 test set in txt format, which are the results reported in the paper.
-
 ## Training
-In order to replicate the results, you need to adjust the MOT17/20 data path accordingly.
 
-Execute run_train.ipynb and monitor all relevant metrics, in general the loss converges at around 8 epochs.
+`python train.py -s -lc 1e-4 d Breakfast`
+
+for `non probabilistic` version of Breakfast dataset
+
+`python train.py -pr -s -lc 1e-4 -d Breakfast`
+
+for `probabilistic` version of Breakfast dataset
 
 ## Inference
-Execute run_test.ipynb. Note that for one specific MOT20 sequence, it may take more time for the inference due to the large number of objects to track. 
+`python test.py`
+
+and `python test.py -v` if you want to visualize segmentations.
 
 If you have any questions using this code, please open an issue. I'll respond ASAP.
 
