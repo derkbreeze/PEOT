@@ -34,18 +34,14 @@ data
 
 ## Training
 
-`python train.py -s -lc 1e-4 d Breakfast`
+`python train.py -s -lc 1e-4 d Breakfast` for `deterministic embeddings` on Breakfast
 
-for `non probabilistic` version of Breakfast dataset
-
-`python train.py -pr -s -lc 1e-4 -d Breakfast`
-
-for `probabilistic` version of Breakfast dataset
+`python train.py -pr -s -lc 1e-4 -d Breakfast` for `probabilistic embeddings` on Breakfast
 
 ## Inference
-`python test.py`
+`python test.py` for normal evaluation
 
-and `python test.py -v` if you want to visualize segmentations.
+or `python test.py -v` for normal evaluation, along with generating segmentation visualizations.
 
 If you have any questions using this code, please open an issue. I'll respond ASAP.
 
