@@ -1,8 +1,8 @@
 # PEOT
 
-Official implementation of the ECCV2026 paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation" by Shuai Li, Duc Manh Vu and Juergen Gall.
-
 ![PEOT](figures/teaser.png)
+
+Official implementation of the ECCV2026 paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation" by Shuai Li, Duc Manh Vu and Juergen Gall.
 
 ## Prepare your data
 The `data` folder should be aranged in the following way:
