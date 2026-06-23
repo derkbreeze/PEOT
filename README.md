@@ -2,7 +2,7 @@
 
 ![PEOT](figures/teaser.png)
 
-Official implementation of the paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation"
+Official implementation of the ECCV2026 paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation" by Shuai Li, Duc Manh Vu and Juergen Gall.
 
 ## Prepare your data
 The `data` folder should be aranged in the following way:
@@ -39,19 +39,8 @@ data
 `python train.py -pr -s -lc 1e-4 -d Breakfast` for `probabilistic embeddings` on Breakfast
 
 ## Inference
-`python test.py` for normal evaluation
+`python test.py` for standard evaluation across all activities
 
-or `python test.py -v` for normal evaluation, along with generating segmentation visualizations.
+or `python test.py -v` for standard evaluation, along with generating segmentation visualizations.
 
 If you have any questions using this code, please open an issue. I'll respond ASAP.
-
-## Citing
-If you find this code useful in your research, please consider citing:
-```bibtex
-@inproceedings{li2022learning,
-  title={Learning of Global Objective for Network Flow in Multi-Object Tracking},
-  author={Li, Shuai and Kong, Yu and Rezatofighi, Hamid},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={8855--8865},
-  year={2022}
-}
