@@ -34,9 +34,9 @@ data
 
 ## Training
 
-`python train.py -s -lc 1e-4 d Breakfast` for `deterministic embeddings` on Breakfast
+`python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for `deterministic` on Breakfast
 
-`python train.py -pr -s -lc 1e-4 -d Breakfast` for `probabilistic embeddings` on Breakfast
+`python train.py -pr -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for `probabilistic` on Breakfast
 
 ## Inference
 `python test.py` for standard evaluation across all activities
