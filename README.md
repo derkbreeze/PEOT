@@ -34,9 +34,13 @@ data
 
 ## Training
 
-`python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for `deterministic` on Breakfast
+`python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **deterministic** on Breakfast.
 
-`python train.py -pr -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for `probabilistic` on Breakfast
+`python train.py -pr -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **probabilistic** on Breakfast.
+
+`python train.py -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **deterministic** on Youtube Instr.
+
+`python train.py -pr -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **probabilistic** on Youtube Instr.
 
 ## Inference
 `python test.py` for standard evaluation across all activities
