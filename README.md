@@ -34,21 +34,23 @@ data
 
 ## Training
 
-`python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **deterministic** on BF.
+change into the PEOT directory, then
 
-`python train.py -pr -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **probabilistic** on BF.
+`python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **deter embeddings**.
 
-`python train.py -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **deterministic** on YTI.
+`python train.py -pr -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **prob embeddings**.
 
-`python train.py -pr -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **probabilistic** on YTI.
+`python train.py -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **deter embeddings**.
 
-`python train.py -s --rho 0.05 -r 0.02 -lat 0.1 -ua -lc 1e-4 -d FSeval` for **deterministic** on 50Salads (eval split).
+`python train.py -pr -s --rho 0.2 -r 0.02 -lat 0.12 -ua -lc 5e-4 -d YTI` for **prob embeddings**.
 
-`python train.py -pr -s --rho 0.05 -r 0.02 -lat 0.1 -ua -lc 1e-4 -d FSeval` for **probabilistic** on 50Salads (eval split).
+`python train.py -s --rho 0.05 -r 0.02 -lat 0.1 -ua -lc 1e-4 -d FSeval` for **deter embeddings** (eval split).
 
-`python train.py -s --rho 0.25 -r 0.01 -lat 0.16 -ua -lr 5e-3 -lc 1e-3 -d desktop_assembly` for **deterministic** on DA.
+`python train.py -pr -s --rho 0.05 -r 0.02 -lat 0.1 -ua -lc 1e-4 -d FSeval` for **prob embeddings** (eval split).
 
-`python train.py -pr -ns 1 -s --rho 0.25 -r 0.01 -lat 0.16 -ua -lr 5e-3 -lc 1e-3 -d desktop_assembly` for **probabilistic** on DA.
+`python train.py -s --rho 0.25 -r 0.01 -lat 0.16 -ua -lr 5e-3 -lc 1e-3 -d desktop_assembly` for **deter embeddings**.
+
+`python train.py -pr -ns 1 -s --rho 0.25 -r 0.01 -lat 0.16 -ua -lr 5e-3 -lc 1e-3 -d desktop_assembly` for **prob embeddings**.
 
 ## Inference
 `python test.py` for standard evaluation across all activities
