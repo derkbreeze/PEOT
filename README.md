@@ -4,7 +4,7 @@
 
 Official implementation of the ECCV2026 paper "Learning Probabilistic Embeddings for Unsupervised Action Segmentation" by Shuai Li, Duc Manh Vu and Juergen Gall.
 
-## Prepare your data
+## Preparing your data
 The `data` folder should be aranged in the following way:
 
 ```data
@@ -34,7 +34,7 @@ data
 
 ## Training
 
-change into the PEOT directory, then
+change into the PEOT directory `cd PEOT`, then
 
 `python train.py -s --rho 0.2 -r 0.04 -at 0.4 -ae 0.7 -lat 0.1 -ua -lc 1e-4 -d Breakfast` for **deter embeddings**.
 
@@ -58,6 +58,10 @@ change into the PEOT directory, then
 or `python test.py -v` for standard evaluation, plus plotting visualizations.
 
 If you have any questions using this code, please open an issue. I'll respond ASAP.
+
+## Working with your own data
+
+The system takes feature matrix as input, rather than raw RGB videos, so you have to extract features first before running the system.
 
 ## Citing
 If you find this code useful in your research, please consider citing:
