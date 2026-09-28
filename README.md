@@ -55,6 +55,19 @@ change into the PEOT directory, then
 ## Inference
 `python test.py` for standard evaluation across all activities
 
-or `python test.py -v` for standard evaluation, along with generating segmentation visualizations.
+or `python test.py -v` for standard evaluation, plus plotting visualizations.
 
 If you have any questions using this code, please open an issue. I'll respond ASAP.
+
+## Citing
+If you find this code useful in your research, please consider citing:
+```bibtex
+@inproceedings{li2026learning,
+  title={Learning Probabilistic Embeddings for Unsupervised Action Segmentation},
+  author={Li, Shuai and Vu, Duc Manh and Gall, Juergen},
+  booktitle={European Conference on Computer Vision},
+  pages={432--450},
+  year={2026},
+  organization={Springer}
+}
+
